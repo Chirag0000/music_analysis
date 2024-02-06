@@ -142,7 +142,7 @@ WITH customer_with_country AS (
 	FROM invoice
 	JOIN customer ON customer.customer_id=invoice.customer_id
 	GROUP BY 1,2,3,4
-	ORDER BY 4 ASC, 5 DESC
+	ORDER BY 4 ASC, 5 ASC
 )
 
 SELECT * FROM customer_with_country WHERE rownum=1;
